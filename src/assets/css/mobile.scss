@@ -1,0 +1,484 @@
+@media only screen and (max-width: 599px) {
+  html > body #app,
+  body #app {
+    overflow-x: hidden;
+    header {
+      height: 90px;
+      em {
+        transform: scale(0.7);
+        display: none;
+        right: 2%;
+      }
+      h1 {
+        font-size: 30px;
+      }
+    }
+
+    .max-width-80vw {
+      max-width: 98vw;
+    }
+    // NAV   =============== //-->
+
+    nav {
+      &:before {
+        opacity: 0;
+      }
+
+      a.hamburger {
+        display: block;
+        width: 34px;
+        height: 36px;
+        border-top: solid 5px #ccc;
+        position: fixed;
+        z-index: 9999999;
+
+        top: 10px;
+        right: 12px;
+        position: fixed;
+        transform: scale(0.8);
+        cursor: pointer;
+      }
+      a.hamburger:hover {
+        cursor: pointer;
+      }
+      a.hamburger::before,
+      a.hamburger::after {
+        content: "";
+        display: block;
+        background: #ccc;
+        width: 100%;
+        height: 5px;
+        left: 0px;
+        position: absolute;
+        transition: transform 0.2s ease;
+        top: 6px;
+      }
+      a.hamburger::after {
+        top: 18px;
+      }
+
+      > div.inner {
+        position: fixed;
+        height: calc(99vh - 45px);
+        top: 50px;
+        width: 90%;
+        right: 0px;
+        flex-direction: column;
+        min-width: 90vw;
+        background-color: #222;
+        border-top: solid 3px #444;
+        justify-content: flex-start;
+        transform: translateX(100vw);
+        transition: transform 0.2s ease-in-out;
+
+        ol.ml30 {
+          margin-left: 0px;
+        }
+        ol {
+          flex-direction: column;
+          justify-content: flex-start;
+          margin-right: auto;
+          position: relative;
+          height: auto;
+          width: 90%;
+          clear: both;
+          margin-top: 40px;
+          > li {
+            display: block;
+            height: 50px;
+            border-bottom: dashed 1px #999;
+            text-align: left;
+            margin-right: 0px;
+            margin-left: 6%;
+            width: 99%;
+            a {
+              width: 100%;
+              padding-left: 10%;
+              &:before {
+                width: 100%;
+                height: 45px;
+                top: 60%;
+              }
+            }
+          }
+        }
+        ol.ml30 {
+          margin-top: 30px;
+          > li {
+            border-bottom: none;
+            a.link__booking {
+              text-align: center;
+              &:before {
+                border-radius: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    nav.open {
+      &:before {
+        content: "";
+        display: block;
+        background: #fff;
+        top: 51px;
+        width: 100vw;
+        height: calc(100vh - 50px);
+        left: 0%;
+        right: 0px;
+        bottom: 0px;
+        opacity: 0.8;
+        z-index: -1;
+        position: absolute;
+        transition: opacity 0.3s ease;
+      }
+      > div.inner {
+        transform: translateX(0vw);
+        transition: transform 0.2s ease-in-out;
+        z-index: 2;
+      }
+      a.hamburger {
+        border: none;
+      }
+
+      a.hamburger::before,
+      a.hamburger::after {
+        transform: rotate(44deg);
+        top: 8px;
+      }
+      a.hamburger::before {
+        transform: rotate(-44deg);
+      }
+    }
+
+    // RESERVE BLOCK ======= //-->
+    .block__reserve-block {
+      .wrapper__date-picker {
+        width: 100%;
+        margin-right: 0px;
+        margin-left: 10px;
+        .wrap__calendar-inp {
+          margin-right: 25px;
+          max-width: 125px;
+        }
+        .wrap__calendar-inp:nth-child(2) {
+          margin-right: 0px;
+          &:before {
+            left: -30px;
+          }
+          &:after {
+            left: -20px;
+          }
+        }
+      }
+
+      li {
+        .wrap__num-guests,
+        .wrap__num-children,
+        button.btn-check-avail.btn-check-avail,
+        #sel_children,
+        #sel_num-adults {
+          width: 50px;
+          height: 50px;
+        }
+        #sel_children,
+        #sel_num-adults {
+          height: 25px;
+        }
+        .wrap__num-children,
+        .wrap__num-guests {
+          label {
+            width: 100%;
+            text-align: center;
+            padding-left: 0px;
+            display: inline-block;
+          }
+        }
+
+        button.btn-check-avail.btn-check-avail {
+          min-width: 190px;
+          text-indent: 0px;
+        }
+        .list__reserve-block {
+          margin-right: 9%;
+        }
+        .list__num-guests {
+          margin-left: 3%;
+        }
+      }
+    }
+
+    // home ======= //-->
+    .container.home {
+      .block__reserve-block {
+        width: 95vw;
+        min-width: 320px;
+      }
+
+      fieldset {
+        width: 90vw;
+        min-width: 320px;
+      }
+      h1 {
+        font: normal 9vw/130% "Times New Roman";
+        margin: 100px 0px 0px 0px;
+        padding: 50px 20px 10px 20px;
+        &:before {
+          top: 20px;
+          left: 6%;
+        }
+        span {
+          font-size: 8vw;
+          &:before {
+            font-size: 7vw;
+            left: -10%;
+            top: -11px;
+            font-size: 9vw;
+          }
+        }
+      }
+      > .flex {
+        flex-direction: column;
+        .pl1,
+        .pl4 {
+          padding-left: 5%;
+        }
+        .pl4 {
+          padding-top: 20px;
+        }
+        .wrap {
+          padding-right: 1%;
+          > p {
+            font-size: 26px;
+            line-height: 125%;
+          }
+        }
+      }
+    }
+
+    // about ======= //-->
+    .about {
+      blockquote {
+        top: 125px;
+        min-width: 84vw;
+        border-width: 10px;
+      }
+    }
+
+    // FAQ ========== // -->
+    .faq {
+      header h1 {
+        margin: 0px;
+        font-size: 25px;
+        line-height: 120%;
+      }
+      ul.list__faq {
+        li {
+          dt {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    // ACTIVITIES ======= // -->
+    .activities {
+      header {
+        height: 200px;
+        h1 {
+          line-height: 60px;
+        }
+        ol {
+          max-width: 99vw;
+          li {
+            a {
+              padding: 4px 8px 5px 8px;
+            }
+            a.active:after {
+              top: 1px;
+              border-radius: 12px;
+            }
+          }
+        }
+      }
+      main.main__activities {
+        // background:#cc0000;
+      }
+
+      .guest__activities {
+        flex-direction: column;
+        overflow: visible;
+
+        .wrap__img {
+          height: 320px;
+          width: 100%;
+          overflow: hidden;
+          position: fixed;
+          left: 0px;
+          top: 200px;
+          > img {
+            height: unset;
+            min-height: unset;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+          }
+        }
+        .wrap__list {
+          width: 100%;
+          overflow: hidden;
+          position: absolute;
+          top: 340px;
+          .inner__activities > ul {
+            position: relative;
+            margin-top: 30px;
+
+            > li {
+              margin: 0px;
+              .inner-when {
+                width: 40%;
+              }
+              div.block__activity {
+                border-top: solid 8px #ccc;
+                border-left: none;
+                position: absolute;
+                top: 0px;
+                display: none;
+                min-height: 33vh;
+                margin-right: 0px;
+                padding: 12px 40% 40px 10px;
+              }
+            }
+            > li.active {
+              div.block__activity {
+                display: block;
+                border-top: solid 8px #990000;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // restaurant ======= //-->
+    .restaurant {
+      .modal-wrapper {
+        .modal-content {
+          width: 90%;
+        }
+        .signup-dinner > a.close-win {
+          right: 0px;
+          top: -50px;
+        }
+      }
+
+      p.tagline {
+        font-size: 20px;
+        padding: 0px 1px 0px 20px;
+      }
+      .flex.max-width-80vw {
+        flex-direction: column;
+        .card {
+          button.btn-menu {
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+
+    // reviews ======= //-->
+    .reviews {
+      header > em {
+        display: block;
+      }
+      h2.mt60 {
+        margin-top: 30px;
+      }
+      .wrap__avg-review {
+        margin-left: 10px;
+        margin-top: 20px;
+      }
+      .wrapper__bynumber,
+      .wrapper__reviews {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+      }
+      ol.list__bynum {
+        flex-direction: column;
+        li {
+          width: 100%;
+          margin-bottom: 12px;
+          .box-num {
+            border: dashed 1px #999;
+            min-height: 60px;
+            height: 60px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            h3,
+            p {
+              display: block;
+              height: 50px;
+              width: 29%;
+              text-align: left;
+              position: relative;
+              margin: 0px;
+            }
+            p {
+              text-align: right;
+              line-height: 100%;
+            }
+            h3 {
+              width: 69%;
+            }
+          }
+        }
+      }
+
+      .wrapper__reviews {
+        flex-direction: column;
+        .wide70,
+        .wide30 {
+          width: 96.9%;
+        }
+      }
+    }
+
+    // contact ======= //-->
+    .contact {
+      button.btn-send {
+        min-width: 250px;
+        width:90%;
+      }
+      .flex.flex-between {
+        flex-direction: column;
+        > .wide45,
+        > .wide50 {
+          width: 96.9%;
+          .contact-wrap {
+            min-width: 340px;
+            margin-left: 15 px;
+            margin-right: 10px;
+            form {
+              width: 96%;
+              padding-left: 0px;
+            }
+          }
+        }
+        > .wide45 {
+          .wrap__content {
+            padding-left: 5%;
+            padding-right: 1%;
+            padding-top: 0px;
+            h3 {
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
